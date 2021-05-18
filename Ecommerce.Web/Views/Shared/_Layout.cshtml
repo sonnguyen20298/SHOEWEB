@@ -1,0 +1,700 @@
+﻿@model Ecommerce.Service.Dto.UserDto
+@{
+    ViewData["Title"] = "GoToLoginPage";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Ecommerce.Web</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt:100,300,400,700" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="~/css/icomoon.css">
+    <!-- Ion Icon Fonts-->
+    <link rel="stylesheet" href="~/css/ionicons.min.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="~/css/flexslider.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="~/css/bootstrap-datepicker.css">
+    <!-- Flaticons  -->
+    <link rel="stylesheet" href="~/fonts/flaticon/font/flaticon.css">
+    <!-- Theme style  -->
+
+    <link rel="stylesheet" href="~/css/logoslider.css">
+    <link rel="stylesheet" href="~/css/collectionslider.css">
+
+    <!-- jQuery -->
+    <script src="~/js/jquery.min.js"></script>
+    <script>
+
+        // Give $ back to prototype.js; create new alias to jQuery.
+        var $jq = jQuery.noConflict();
+
+    </script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/style.css">
+    <!------ Include the above in your HEAD tag ---------->
+
+
+
+</head>
+<body>
+    <div class="colorlib-loader" style="display: none;"></div>
+
+    <div id="page">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle colorlib-nav-white"><i></i></a>
+        @*Start header mobile*@
+        <div id="colorlib-offcanvas">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Trang Chủ</font>
+                        </font>
+                    </a>
+                </li>
+                <li class="active offcanvas-has-dropdown">
+                    <a href="men.html">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Giày Nam</font>
+                        </font>
+                    </a>
+                    <ul class="dropdown">
+                        <li>
+                            <a href="product-detail.html">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Chi tiết sản phẩm</font>
+                                </font>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cart.html">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giỏ hàng</font>
+                                </font>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="checkout.html">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Thủ tục thanh toán</font>
+                                </font>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="order-complete.html">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Hoàn thành đơn hàng</font>
+                                </font>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="add-to-wishlist.html">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Danh sách mong muốn</font>
+                                </font>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="women.html">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Giày Nữ</font>
+                        </font>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Cửa hàng</font>
+                        </font>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Liên hệ</font>
+                        </font>
+                    </a>
+                </li>
+                <li class="cart">
+                    <a href="cart.html">
+                        <i class="icon-shopping-cart"></i>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> Giỏ hàng [0]</font>
+                        </font>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        @*End header mobile*@
+
+        @*Start header web*@
+        <nav class="colorlib-nav" role="navigation">
+            <div class="top-menu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 col-md-9">
+                            <div id="colorlib-logo" style="display: table-caption;">
+                                <a href="index.html" style="display: flex;">
+                                    <img src="~/images/logo-giay.png" alt="" style="max-width: 100%;">Giày
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 col-md-3">
+                            <form action="#" class="search-wrap">
+                                <div class="form-group">
+                                    <input type="search" class="form-control search" placeholder="Tìm kiếm">
+                                    <button class="btn btn-primary submit-search text-center" type="submit">
+                                        <i class="icon-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-left menu-1">
+                            <ul>
+                                <li>
+                                    <a asp-controller="Home" asp-action="Index">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Trang Chủ</font>
+                                        </font>
+                                    </a>
+                                </li>
+
+                                @foreach (var item in ViewBag.categories)
+                                {
+                                    <li class="has-dropdown active">
+                                        <a asp-controller="ProductList" asp-action="GetProductByCategoryLevel1" asp-route-id="@item.Id">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">@item.Name </font>
+                                            </font>
+                                        </a>
+                                        <ul class="dropdown">
+                                            @foreach (var itemLevel2 in ViewBag.categoriesLevel2)
+                                            {
+                                                @if (itemLevel2.ParentId == item.Id)
+                                                {
+                                                    <li>
+                                                        <a asp-controller="ProductList" asp-action="GetProductByCategoryLevel2" asp-route-id="@itemLevel2.Id">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">@itemLevel2.Name</font>
+                                                            </font>
+                                                        </a>
+                                                    </li>
+                                                }
+                                            }
+                                        </ul>
+                                    </li>
+                                }
+                                <li>
+                                    <a href="about.html">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Cửa hàng</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Liên hệ</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li class="cart">
+                                    <a href="cart.html">
+                                        <i class="icon-shopping-cart"></i>
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;"> Giỏ hàng [0]</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li class="cart">
+                                    <a href="#signup" data-toggle="modal" data-target=".bd-example-modal-lg">
+                                        <i class="icon-shopping-cart"></i>
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;"> Đăng nhập </font>
+                                        </font>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sale">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 offset-sm-2 text-center">
+                            <div class="row">
+                                <div class="owl-carousel2">
+                                    <div class="item">
+                                        <div class="col">
+                                            <h3>
+                                                <a href="#">Giảm 25% (Hầu hết) Mọi thứ! Mã sử dụng: Giảm giá mùa hè</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="col">
+                                            <h3>
+                                                <a href="#">
+                                                    Giảm giá lớn nhất của chúng tôi nhưng giảm 50% tất cả giày
+                                                    mùa hè
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        @*End header web*@
+
+
+        <!-- content -->
+        @RenderBody()
+
+
+        @*Login Modal*@
+        <div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <br>
+                    <div class="bs-example bs-example-tabs">
+                        <ul id="myTab" class="nav nav-tabs">
+                            <li class="active"><a href="#signin" data-toggle="tab">Đăng Nhập</a></li>
+                            <li class=""><a href="#signup" data-toggle="tab">Đăng Ký</a></li>
+                        </ul>
+                    </div>
+                    <div class="modal-body">
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade in" id="why">
+                                <p>We need this information so that you can receive access to the site and its content. Rest assured your information will not be sold, traded, or given to anyone.</p>
+                                <p></p><br> Please contact <a mailto:href="JoeSixPack@Sixpacksrus.com"></a>JoeSixPack@Sixpacksrus.com</a> for any other inquiries.</p>
+                            </div>
+                            <div class="tab-pane fade active in" id="signin">
+                                <form class="form-horizontal" asp-action="Login" asp-controller="Login">
+                                    <fieldset>
+                                        <!-- Sign In Form -->
+                                        <!-- Text input-->
+                                        <div class="control-group">
+                                            <label class="control-label" for="userid">Tên Đăng Nhập</label>
+                                            <div class="controls">
+                                                <input required="" id="userid" name="UserName" type="text" class="form-control" placeholder="Tên Đăng Nhập" class="input-medium" required="">
+                                            </div>
+                                        </div>
+
+                                        <!-- Password input-->
+                                        <div class="control-group">
+                                            <label class="control-label" for="passwordinput">Mật Khẩu</label>
+                                            <div class="controls">
+                                                <input required="" id="passwordinput" name="Password" class="form-control" type="password" placeholder="Mật Khẩu" class="input-medium" required="">
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Button -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="signin"></label>
+                                            <div class="controls">
+                                                <button id="signin" name="signin" class="btn btn-success">Đăng Nhập</button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="signup">
+                                <form class="form-horizontal" asp-action="Register" asp-controller="Login">
+                                    <fieldset>
+                                        <!-- Sign Up Form -->
+                                        <!-- Text input-->
+
+                                        <div class="control-group">
+                                            <label class="control-label" for="Name">Họ tên:</label>
+                                            <div class="controls">
+                                                <input id="Name" asp-for="Name" class="form-control" type="text" placeholder="Nhập họ tên" required="">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="Username">Tên Đăng Nhập:</label>
+                                            <div class="controls">
+                                                <input id="Username" asp-for="Username" class="form-control" type="text" placeholder="Nhập tên đăng nhập" required="">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="Phone">SĐT:</label>
+                                            <div class="controls">
+                                                <input id="Phone" asp-for="Phone" class="form-control" type="text" placeholder="Nhập số điện thoại" required="">
+                                            </div>
+                                        </div>
+                                        <!-- Text input-->
+                                        <div class="control-group">
+                                            <label class="control-label" for="Email">Email:</label>
+                                            <div class="controls">
+                                                <input id="Email" asp-for="Email" class="form-control" type="text" placeholder="Nhập email" required="">
+                                            </div>
+                                        </div>
+
+                                        <!-- Password input-->
+                                        <div class="control-group">
+                                            <label class="control-label" for="password">Mật khẩu:</label>
+                                            <div class="controls">
+                                                <input id="password" asp-for="Password" class="form-control" type="password" placeholder="Mật Khẩu từ 6 đến 32 ký tự" class="input-large" required="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3 ">
+                                                <label class="control-label">Giới tính:</label>
+                                            </div>
+                                            <div class="col-md-3 form-check-inline ">
+                                                <label for="Male" class="control-label">
+                                                    <input id="Male" asp-for="Gender" value="1" class="form-check-input" type="radio" checked>Nam
+                                                </label>
+                                            </div>
+                                            <div class="col-md-3 form-check-inline mr-auto">
+                                                <label for="Female" class="control-label">
+                                                    <input id="Female" asp-for="Gender" value="0" class="form-check-input" type="radio">Nữ
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="Birthday">Ngày sinh:</label>
+                                            <div class="controls">
+                                                <input type="datetime" id="Birthday" asp-for="Birthday" class="form-control" data-toggle="datepicker">
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Button -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="confirmsignup"></label>
+                                            <div class="controls">
+                                                <button id="confirmsignup" name="confirmsignup" class="btn btn-success" type="submit">Đăng ký</button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <center>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*End Login Modal*@
+
+
+        <footer id="colorlib-footer" role="contentinfo">
+            <div class="container">
+                <div class="row row-pb-md">
+                    <div class="col footer-col colorlib-widget">
+                        <h4>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Về Giày</font>
+                            </font>
+                        </h4>
+                        <p>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    Ngay cả Pointing toàn năng cũng không kiểm soát
+                                    được các văn bản mù, nó là một cuộc sống gần như không chính thống
+                                </font>
+                            </font>
+                        </p>
+                        <p>
+                        </p>
+                        <ul class="colorlib-social-icons">
+                            <li><a href="#"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                            <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                        </ul>
+                        <p></p>
+                    </div>
+                    <div class="col footer-col colorlib-widget">
+                        <h4>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Chăm sóc khách hàng</font>
+                            </font>
+                        </h4>
+                        <p>
+                        </p>
+                        <ul class="colorlib-footer-links">
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Liên hệ</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Trả về / Trao đổi</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Phiếu quà tặng</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Danh sách mong muốn</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Đặc biệt</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Dịch vụ khách hàng</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Bản đồ trang web</font>
+                                    </font>
+                                </a>
+                            </li>
+                        </ul>
+                        <p></p>
+                    </div>
+                    <div class="col footer-col colorlib-widget">
+                        <h4>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Thông tin</font>
+                            </font>
+                        </h4>
+                        <p>
+                        </p>
+                        <ul class="colorlib-footer-links">
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Về chúng tôi</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Thông tin giao hàng</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Chính sách bảo mật</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Ủng hộ</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Theo dõi đơn hàng</font>
+                                    </font>
+                                </a>
+                            </li>
+                        </ul>
+                        <p></p>
+                    </div>
+
+                    <div class="col footer-col">
+                        <h4>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Tin tức</font>
+                            </font>
+                        </h4>
+                        <ul class="colorlib-footer-links">
+                            <li>
+                                <a href="blog.html">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Blog</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">nhấn</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Triển lãm</font>
+                                    </font>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col footer-col">
+                        <h4>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Thông tin liên lạc</font>
+                            </font>
+                        </h4>
+                        <ul class="colorlib-footer-links">
+                            <li>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">291 South 21th Street, </font>
+                                </font><br>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Suite 721 New York NY 10016</font>
+                                </font>
+                            </li>
+                            <li>
+                                <a href="tel://1234567920">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">+ 1235 2355 98</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@yoursite.com">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">info@yoursite.com</font>
+                                    </font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">yoursite.com</font>
+                                    </font>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <p>
+                            <span>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">
+                                        Bản quyền ©
+                                    </font>
+                                </font>
+                                <script>document.write(new Date().getFullYear());</script>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">2020 Tất cả các quyền | </font>
+                                    <font style="vertical-align: inherit;">Mẫu này được thực hiện với</font>
+                                </font><i class="icon-heart" aria-hidden="true"></i>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">bởi </font>
+                                </font><a href="https://colorlib.com" target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Colorlib</font>
+                                    </font>
+                                </a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </span>
+                            <span class="block">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> Demo Hình ảnh: </font>
+                                </font><a href="http://unsplash.co/" target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Bapt</font>
+                                    </font>
+                                </a>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> , </font>
+                                </font><a href="http://pexels.com/" target="_blank">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Pexels.com</font>
+                                    </font>
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
+    </div>
+    <!-- jQuery -->
+    <script src="~/js/jquery.min.js"></script>
+    <!-- popper -->
+    <script src="~/js/popper.min.js"></script>
+    <!-- bootstrap 4.1 -->
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- jQuery easing -->
+    <script src="~/js/jquery.easing.1.3.js"></script>
+    <!-- Waypoints -->
+    <script src="~/js/jquery.waypoints.min.js"></script>
+    <!-- Flexslider -->
+    <script src="~/js/jquery.flexslider-min.js"></script>
+    <!-- Owl carousel -->
+    <script src="~/js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/magnific-popup-options.js"></script>
+    <!-- Date Picker -->
+    <script src="~/js/bootstrap-datepicker.js"></script>
+    <!-- Stellar Parallax -->
+    <script src="~/js/jquery.stellar.min.js"></script>
+    <!-- Main -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="~/js/logoslider.js"></script>
+    <script src="~/js/datepicker.js"></script>
+    <script src="~/js/main.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

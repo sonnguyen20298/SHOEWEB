@@ -1,0 +1,27 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/eTakaful.Test
+/eTakaful.Repository/obj
+/eTakaful.Repository/bin
+/eTakaful.Domain/obj
+/eTakaful.Domain/bin
+/eTakaful.Core/obj
+/eTakaful.Core/bin
+/EcommerceCommon/obj
+/EcommerceCommon/bin/Debug/netcoreapp2.2
+/.vscode
+/.vs
+/WebSite
+/Ecommerce.Web/obj
+/Ecommerce.Web/bin/Debug/netcoreapp3.0
+/ShoeWeb/ShoeWeb/obj
+/ShoeWeb/ShoeWeb.Common/obj
+/ShoeWeb/ShoeWeb.Domain/obj
+/ShoeWeb/ShoeWeb.Portal/obj
+/ShoeWeb/ShoeWeb.Repository/obj
+/ShoeWeb/ShoeWeb.Service/obj
+/Ecommerce.Web/Ecommerce.Web.xml
+/Ecommerce.Admin/obj
+/Ecommerce.Admin/bin/Debug/netcoreapp3.1

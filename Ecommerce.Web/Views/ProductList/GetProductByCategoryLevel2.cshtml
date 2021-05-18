@@ -1,0 +1,621 @@
+﻿@*@model Ecommerce.Service.ViewModels.ProductList.ProductListModel*@
+@{
+    ViewData["Title"] = "GetProductByCategoryLevel2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="bread">
+                    <span>
+                        <a asp-controller="Home" asp-action="Index">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Trang chủ</font>
+                            </font>
+                        </a>
+                    </span>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;"> /</font>
+                    </font><span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> @ViewBag.CategoriesProductList.Name</font>
+                        </font>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="breadcrumbs-two">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumbs-img" style="background-image: url(&quot;/images/@ViewBag.CategoriesProductList.URLImage&quot;);">
+                    <h2>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">@ViewBag.CategoriesProductList.Name</font>
+                        </font>
+                    </h2>
+                </div>
+                <div class="menu text-center">
+                    <p>
+                        <a href="#">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Hàng Mới </font>
+                            </font>
+                        </a> <a href="#">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Bán Chạy </font>
+                            </font>
+                        </a> <a href="#">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Giảm Giá Nhiều </font>
+                            </font>
+                        </a> <a href="#">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Giá Thấp</font>
+                            </font>
+                        </a>
+                        </a> <a href="#">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Giá Cao</font>
+                            </font>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="colorlib-featured">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <div class="featured">
+                    <div class="featured-img featured-img-2"
+                         style="background-image: url(&quot;/images/img_bg_2.jpg&quot;);">
+                        <h2>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Bình thường</font>
+                            </font>
+                        </h2>
+                        <p>
+                            <a href="#" class="btn btn-primary btn-lg">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Mua ngay</font>
+                                </font>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="featured">
+                    <div class="featured-img featured-img-2" style="background-image: url(&quot;/images/women.jpg&quot;);">
+                        <h2>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Trang phục</font>
+                            </font>
+                        </h2>
+                        <p>
+                            <a href="#" class="btn btn-primary btn-lg">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Mua ngay</font>
+                                </font>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="featured">
+                    <div class="featured-img featured-img-2" style="background-image: url(&quot;/images/item-11.jpg&quot;);">
+                        <h2>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Các môn thể thao</font>
+                            </font>
+                        </h2>
+                        <p>
+                            <a href="#" class="btn btn-primary btn-lg">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Mua ngay</font>
+                                </font>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="colorlib-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-xl-3">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="side border mb-1">
+                            <h3>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Nhãn hiệu</font>
+                                </font>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Nike</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Adidas</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Merrel</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Gucci</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Skechers</font>
+                                        </font>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="side border mb-1">
+                            <h3>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Kích thước rộng</font>
+                                </font>
+                            </h3>
+                            <div class="block-26 mb-2">
+                                <h4>
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Kích thước</font>
+                                    </font>
+                                </h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">7</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">7,5</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">số 8</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">8,5</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">9</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">9,5</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">10</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">10,5</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">11</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">11,5</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">12</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">12,5</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">13</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">13,5</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">14</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="block-26">
+                                <h4>
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Chiều rộng</font>
+                                    </font>
+                                </h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">M</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">W</font>
+                                            </font>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="side border mb-1">
+                            <h3>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Phong cách</font>
+                                </font>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Trượt trên</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Giày ống</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Dép xăng đan</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Ren Up</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Oxfords</font>
+                                        </font>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="side border mb-1">
+                            <h3>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Màu sắc</font>
+                                </font>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Đen</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">trắng</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Màu xanh da trời</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Màu đỏ</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">màu xanh lá</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Xám</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">trái cam</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Kem</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">nâu</font>
+                                        </font>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="side border mb-1">
+                            <h3>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Vật chất</font>
+                                </font>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Da</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Da lộn</font>
+                                        </font>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="side border mb-1">
+                            <h3>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Công nghệ</font>
+                                </font>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Sinh học</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Rãnh</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Linh hoạt</font>
+                                        </font>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-xl-9">
+                <div class="row row-pb-md">
+                    @foreach (var item in ViewBag.Products)
+                    {
+                        <div class="col-lg-4 mb-4 text-center">
+                            <div class="product-entry border">
+                                <div class="productimg">
+                                    <a asp-controller="ProductDetail" asp-action="GetProductDetail" asp-route-id="@item.Id" class="prod-img">
+                                        <img src="~/images/@item.UrlImage" class="img-fluid"
+                                             alt="@item.Name">
+                                    </a>
+                                    <div class="voucher_1">
+                                        <span>-@Math.Round(((1 - @item.DiscountPrice / @item.Price) * 100), 0)%</span>
+                                    </div>
+                                    <div class="voucher_2">
+                                        <span> hot</span>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <h2>
+                                        <a asp-controller="ProductDetail" asp-action="GetProductDetail" asp-route-id="@item.Id">
+                                            <div><span>@item.Name</span></div>
+
+                                        </a>
+                                    </h2>
+                                    <div class="d-inline-flex">
+                                        <div class="price_1 mr-2 d-block">
+                                            <span class="">@(Math.Round(@item.Price,0)) </span>
+                                            <span>₫</span>
+                                        </div>
+                                        <div class="price_2 d-block">
+                                            <span> @(Math.Round(@item.DiscountPrice,0)) </span>
+                                            <span>₫</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*<a asp-controller="ProductDetail" asp-action="GetProductDetail" asp-route-id="@item.Id" class="prod-img">
+                                        <img src="~/images/@item.UrlImage" class="img-fluid"
+                                             alt="@item.Name">
+                                    </a>
+                                    <div class="desc">
+                                        <h2>
+                                            <a asp-controller="ProductDetail" asp-action="GetProductDetail" asp-route-id="@item.Id">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">@item.Name</font>
+                                                </font>
+                                            </a>
+                                        </h2>
+                                        <span class="price">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">$ @item.Price</font>
+                                            </font>
+                                        </span>
+                                    </div>*@
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="block-27">
+                            <ul>
+                                <li><a href="#"><i class="ion-ios-arrow-back"></i></a></li>
+                                <li class="active">
+                                    <span>
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">1</font>
+                                        </font>
+                                    </span>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">2</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">3</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">4</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">5</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li><a href="#"><i class="ion-ios-arrow-forward"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Partial("_BrandSlider")

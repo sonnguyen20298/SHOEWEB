@@ -1,0 +1,109 @@
+﻿@model IQueryable<Ecommerce.Domain.Models.Supplier>
+
+@{
+    ViewData["Title"] = "GetSupplierList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Supplier</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Supplier</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                        </div>
+
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th> Tên nhà cung cấp </th>
+                                        <th> CodeName </th>
+                                        <th> Email </th>
+                                        <th> Fax </th>
+                                        <th> Phone </th>
+                                        <th> Trạng thái </th>
+                                        <th>Bị Xóa </th>
+                                        <th> Ngày tạo </th>
+                                        <th>Người tạo</th>
+                                        <th>Người sửa</th>
+                                        <th>Ngày sửa</th>
+                                        <th>Chức năng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                    <tr>
+                                        <td>@item.Name </td>
+                                        <td>@item.CodeName</td>
+                                        <td>@item.Email</td>
+                                        <td>@item.Fax</td>
+                                        <td>@item.Phone</td>
+                                        <td>@item.Status</td>
+                                        <td>@item.IsDeleted</td>
+                                        <td>@item.CreatedDate</td>
+                                        <td>@item.CreatedBy</td>
+                                        <td>@item.UpdatedDate</td>
+                                        <td>@item.UpdatedBy </td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        </td>
+                                    </tr>
+                                    }
+
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th> Tên nhà cung cấp </th>
+                                        <th> CodeName </th>
+                                        <th> Email </th>
+                                        <th> Fax </th>
+                                        <th> Phone </th>
+                                        <th> Trạng thái </th>
+                                        <th>Bị Xóa </th>
+                                        <th> Ngày tạo </th>
+                                        <th>Người tạo</th>
+                                        <th>Người sửa</th>
+                                        <th>Ngày sửa</th>
+                                        <th>Chức năng</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+
+

@@ -1,0 +1,482 @@
+﻿@*@model Ecommerce.Service.ViewModels.Homepage.HomepageModel*@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#bs-carousel" data-slide-to="1"></li>
+        <li data-target="#bs-carousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+            <div class="item slides active">
+                <div style="background-image: url(&quot;images/collection1.jpg&quot;);height: 100vh;background-size: cover;background-position: center center;background-repeat: no-repeat;"></div>
+                <div class="hero">
+                    <hgroup>
+                        <h1>We are creative</h1>
+                        <h3>Get start your next awesome project</h3>
+                    </hgroup>
+                    <a href="#" class="btn btn-hero btn-lg" role="button">Bộ sưu tập cửa hàng</a>
+                </div>
+            </div>
+            @foreach (var item in ViewBag.CollectionHomepage)
+            {
+                <div class="item slides">
+                    <div style="background-image: url(&quot;images/@item.UrlImage&quot;);height: 100vh;background-size: cover;background-position: center center;background-repeat: no-repeat;"></div>
+                    <div class="hero">
+                        <hgroup>
+                            <h1>@item.Name</h1>
+                            <h3>Get start your next awesome project</h3>
+                        </hgroup>
+                        <a href="#" class="btn btn-hero btn-lg" role="button">Bộ sưu tập @item.Name</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+<div class="colorlib-intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2 class="intro">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Nó bắt đầu với một ý tưởng đơn giản: Tạo ra những
+                            sản phẩm chất lượng, được thiết kế tốt mà tôi muốn bản thân mình.
+                        </font>
+                    </font>
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="colorlib-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 offset-sm-2 text-center colorlib-heading">
+                <h2>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Bán chạy nhất</font>
+                    </font>
+                </h2>
+            </div>
+        </div>
+        <div class="row row-pb-md">
+            @foreach (var item in ViewBag.ProductTopView)
+            {
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <div class="productimg">
+                            <a asp-controller="ProductDetail" asp-action="GetProductDetail" asp-route-id="@item.Id" class="prod-img">
+                                <img src="~/images/@item.UrlImage" class="img-fluid"
+                                     alt="@item.Name">
+                            </a>
+                            <div class="voucher_1">
+                                <span>-@Math.Round(((1 - @item.PriceSale / @item.Price) * 100), 0)%</span>
+                            </div>
+                            <div class="voucher_2">
+                                <span> hot</span>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <h2>
+                                <a asp-controller="ProductDetail" asp-action="GetProductDetail" asp-route-id="@item.Id">
+                                    <div><span>@item.Name</span></div>
+
+                                </a>
+                            </h2>
+                            <div class="d-inline-flex">
+                                <div class="price_1 mr-2 d-block">
+                                    <span class="">@(Math.Round(@item.Price,0)) </span>
+                                    <span>₫</span>
+                                </div>
+                                <div class="price_2 d-block">
+                                    <span> @(Math.Round(@item.PriceSale,0)) </span>
+                                    <span>₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        @*<a asp-controller="ProductDetail" asp-action="GetProductDetail" asp-route-id="@item.Id" class="prod-img">
+                                <img src="images/@item.UrlImage" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                            </a>
+
+                                   <div class="desc">
+                                <h2>
+                                    <a asp-controller="ProductDetail" asp-action="GetProductDetail" asp-route-id="@item.Id">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">@item.Name</font>
+                                        </font>
+                                    </a>
+                                </h2>
+                                <span class="price">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">$ @item.Price</font>
+                                    </font>
+                                </span>
+                            </div>*@
+                    </div>
+                </div>
+            }
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-1.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày nữ Maca</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-2.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Phụ nữ Minam Mea Afghanistan</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-3.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Ủy viên nam Taja</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-4.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày thể thao nam</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-5.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày nữ Maca</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-6.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày nữ Maca</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-7.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày nữ Maca</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-8.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày nữ Maca</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-9.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày nữ Maca</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-10.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày nữ Maca</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-11.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày nữ Maca</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-12.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày nữ Maca</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-13.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày nữ Maca</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-14.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày nữ Maca</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-15.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày nữ Maca</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4 text-center">
+                <div class="product-entry border">
+                    <a href="#" class="prod-img">
+                        <img src="images/item-16.jpg" class="img-fluid" alt="Mẫu bootstrap 4 miễn phí html5">
+                    </a>
+                    <div class="desc">
+                        <h2>
+                            <a href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Giày nữ Maca</font>
+                                </font>
+                            </a>
+                        </h2>
+                        <span class="price">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 139,00</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>
+                    <a href="#" class="btn btn-primary btn-lg">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Mua tất cả sản phẩm</font>
+                        </font>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Partial("_BrandSlider")
+
